@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AM Vending | Free Vending Machines for Central Connecticut</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="AM Vending is a local Meriden, CT startup providing free vending machine installations and maintenance for businesses and properties across Central Connecticut." />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="main-header">
+  <div class="logo-container">
+    <img src="images/amvendingct-logo.png" alt="AM Vending CT Logo" class="site-logo">
+    <div class="logo-text">
+      <h1>AM Vending CT</h1>
+      <p class="tagline">Reliable Snack & Drink Solutions</p>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact" class="btn-nav">Contact Us</a>
+  </nav>
+</header>
+
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Free Vending Machines for Your Property or Business</h2>
+      <p>We install and maintain modern, cashless vending machines — at no cost to you. Perfect for apartments, offices, dealerships, and local businesses across Central Connecticut.</p>
+      <a href="#contact" class="btn-request">Request a Machine</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <h2>About AM Vending</h2>
+    <p>
+      AM Vending is a <strong>local startup based in Meriden, Connecticut</strong>, dedicated to bringing convenient snack and drink options to <strong>residents, property managers, and local businesses</strong> across <strong>Central Connecticut</strong>. We provide <strong>free vending machine installations</strong> that include delivery, restocking, and maintenance — making it easy for apartments, offices, and small businesses to offer refreshments without any cost or effort.
+    </p>
+    <p><em>Our mission is simple — to make everyday convenience local, reliable, and stress-free.</em></p>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <h2>What We Provide</h2>
+    <div class="service-grid">
+      <div>
+        <h3>Free Installation</h3>
+        <p>We deliver, install, and stock the machine — you pay nothing.</p>
+      </div>
+      <div>
+        <h3>Maintenance Included</h3>
+        <p>AM Vending handles all servicing, cleaning, and restocking.</p>
+      </div>
+      <div>
+        <h3>Cashless Payments</h3>
+        <p>All machines accept card, Apple Pay, and Google Pay.</p>
+      </div>
+      <div>
+        <h3>Customized Selections</h3>
+        <p>Choose snacks and drinks that fit your residents, visitors, or customers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Request a Machine</h2>
+    <p>Ready to get started? Fill out the form below or call us directly — we’ll handle the rest.</p>
+
+    <!-- Replace YOUR_FORM_ID with your actual Formspree ID -->
+    <form action="https://formspree.io/f/mqaylrzl" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="text" name="business" placeholder="Business / Property Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <textarea name="message" rows="4" placeholder="Tell us about your location or needs..." required></textarea>
+      <button type="submit" class="btn-submit">Send Request</button>
+    </form>
+
+    <p class="call-direct">Or call us directly at <a href="tel:4754347354">475-434-7354</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 AM Vending | Meriden, CT | Serving Central Connecticut</p>
+  </footer>
+<script>
+  const form = document.querySelector(".contact-form");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // stop normal redirect
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        // show success message
+        form.innerHTML = `
+          <div class="form-success">
+            ✅ <strong>Thank you!</strong> We’ll contact you soon about placing your vending machine.
+          </div>
+        `;
+      } else {
+        alert("❌ Something went wrong. Please try again later.");
+      }
+    } catch (error) {
+      alert("❌ Network error. Please check your connection and try again.");
+    }
+  });
+</script>
+
+</body>
+</html>
