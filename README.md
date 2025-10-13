@@ -11,7 +11,7 @@ We specialize in:
 
 ### 💻 Website
 Visit our official site:  
-👉 [https://allenl27.github.io/amvendingct/](https://allenl27.github.io/amvendingct/)
+👉 [https://amvendingct.org)/](https://amvendingct.org)
 
 ### 📬 Contact
 📧 amvending@gmail.com  
