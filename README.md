@@ -14,7 +14,7 @@ Visit our official site:
 👉 [https://amvendingct.org](https://amvendingct.org)
 
 ### 📬 Contact
-📧 amvending@gmail.com  
+📧 amvendingct@gmail.com  
 📍 Meriden, CT  
 
 ---
